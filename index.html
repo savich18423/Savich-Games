@@ -1,194 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Savich Games</title>
+<title>Savich18 Games</title>
 
 <style>
 
 body{
-background:#0b0b0b;
-color:#e5e5e5;
-font-family:Courier New, monospace;
 margin:0;
-}
-
-.container{
-width:900px;
-margin:auto;
-background:#111;
-padding:20px;
+font-family:Arial;
+background:#0f0f0f;
+color:white;
 }
 
 header{
-border-bottom:1px solid #333;
-padding-bottom:10px;
-margin-bottom:20px;
+background:#111;
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+nav{
+text-align:center;
+padding:10px;
+background:#181818;
 }
 
 nav a{
-color:#9bdcff;
-margin-right:20px;
+color:white;
 text-decoration:none;
+margin:0 15px;
+font-size:18px;
 }
 
-nav a:hover{
-text-decoration:underline;
+section{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
 }
 
-h1{
-color:#ffffff;
+h2{
+border-bottom:2px solid #444;
+padding-bottom:10px;
 }
 
-.section{
-margin-top:40px;
-border-top:1px solid #333;
-padding-top:20px;
-}
-
-.gamebox{
-background:#000;
-padding:15px;
-border:1px solid #444;
+.card{
+background:#1b1b1b;
+padding:25px;
+border-radius:10px;
+margin-top:20px;
 }
 
 button{
-background:#222;
+background:#ff3c3c;
+border:none;
+padding:12px 20px;
 color:white;
-border:1px solid #666;
-padding:10px;
+font-size:16px;
+border-radius:6px;
 cursor:pointer;
 }
 
 button:hover{
-background:#333;
+background:#ff1a1a;
 }
 
-input, textarea{
+input,textarea{
 width:100%;
-padding:10px;
+padding:12px;
 margin-top:10px;
-background:#000;
-border:1px solid #555;
+margin-bottom:15px;
+border-radius:6px;
+border:none;
+background:#2a2a2a;
 color:white;
-font-family:Courier New, monospace;
 }
 
 footer{
+text-align:center;
+padding:25px;
+background:#111;
 margin-top:40px;
-font-size:12px;
-color:#777;
+color:#888;
 }
 
-.links a{
-color:#9bdcff;
-display:block;
-margin-top:5px;
+a.link{
+color:#ff3c3c;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
-
 <header>
-<h1>Savich Games</h1>
-
-<nav>
-<a href="#home">homepage</a>
-<a href="#game">our game</a>
-<a href="#about">about</a>
-<a href="#contact">contact</a>
-</nav>
-
+Savich18 Games
 </header>
 
-<div id="home">
+<nav>
+<a href="#about">About</a>
+<a href="#game">Game</a>
+<a href="#demo">Demo</a>
+<a href="#social">Social</a>
+<a href="#contact">Contact</a>
+</nav>
 
-<h2>Welcome</h2>
+<section id="about">
+
+<h2>About</h2>
+
+<div class="card">
 
 <p>
-Welcome to Savich Games. This is my small indie game project where I create experimental games and strange worlds.
+My name is <b>Zakhar</b>.  
+I am Russian but currently living in <b>Vietnam</b>.
 </p>
 
 <p>
-All games are made using Unity and focused mostly on 3D environments and atmospheric gameplay.
+I am an indie developer making games in <b>Unity (3D only)</b>.
+</p>
+
+<p>
+My goal is to create atmospheric psychological games and interesting experimental projects.
 </p>
 
 </div>
 
-<div class="section" id="game">
+</section>
+
+<section id="game">
 
 <h2>Our Game</h2>
 
-<div class="gamebox">
+<div class="card">
 
-<h3>The subject: Protocol Zero</h3>
+<h3>The Subject: Protocol Zero</h3>
 
 <p>
-A mysterious experimental laboratory game where every system hides secrets.
+Psychological experimental game where the player explores strange environments and hidden experiments.
 </p>
 
 <p>
-You explore strange locations, activate unknown systems and uncover hidden mechanisms.
+Steam Page:
 </p>
 
-<a href="https://store.steampowered.com/app/4332220/The_subject_Protocol_zero_Demo/">
-<button>Play Demo on Steam</button>
+<a class="link" href="https://store.steampowered.com/app/4287530/The_subject_Protocol_zero/" target="_blank">
+View on Steam
 </a>
 
 </div>
 
-</div>
+</section>
 
-<div class="section" id="about">
+<section id="demo">
 
-<h2>About</h2>
+<h2>Demo</h2>
 
-<p>
-My name is Zakhar. I am a Russian indie developer currently living in Vietnam.
-</p>
+<div class="card">
 
 <p>
-I create games using Unity and mainly focus on 3D projects. I enjoy building strange environments, experimental mechanics and atmospheric worlds.
+You can try the demo version here:
 </p>
 
-<p>
-Savich Games is my personal indie project where I publish prototypes, demos and experimental game ideas.
-</p>
-
-<div class="links">
-
-<strong>Social Links</strong>
-
-<a href="https://www.youtube.com/@Savich18Company">YouTube Channel</a>
-
-<a href="https://store.steampowered.com/curator/45912717-Savich18-Games/">Steam Curator Page</a>
-
-<a href="https://store.steampowered.com/app/4332220/The_subject_Protocol_zero_Demo/">Game Demo</a>
+<a class="link" href="https://store.steampowered.com/app/4332220/The_subject_Protocol_zero_Demo/?snr=1_1056_4_18_1059&curator_clanid=45912717" target="_blank">
+Download Demo on Steam
+</a>
 
 </div>
 
+</section>
+
+<section id="social">
+
+<h2>Social</h2>
+
+<div class="card">
+
+<p>YouTube:</p>
+
+<a class="link" href="https://www.youtube.com/@Savich18Company" target="_blank">
+Savich18Company
+</a>
+
+<br><br>
+
+<p>Steam Curator:</p>
+
+<a class="link" href="https://store.steampowered.com/curator/45912717-Savich18-Games/" target="_blank">
+Savich18 Games Curator
+</a>
+
 </div>
 
-<div class="section" id="contact">
+</section>
+
+<section id="contact">
 
 <h2>Contact</h2>
 
-<p>
-Send a message directly from the site:
-</p>
+<div class="card">
+
+<p>Send us a message:</p>
 
 <form action="https://formspree.io/f/mgoneayw" method="POST">
 
-<input type="text" name="name" placeholder="Your name" required>
+<input type="email" name="email" placeholder="Your Email" required>
 
-<input type="email" name="email" placeholder="Your email" required>
+<textarea name="message" rows="6" placeholder="Your Message" required></textarea>
 
-<textarea name="message" rows="6" placeholder="Your message" required></textarea>
+<input type="hidden" name="_subject" value="Message from Savich18 Games site">
+
+<input type="hidden" name="_redirect" value="https://savich18.work.gd/">
 
 <button type="submit">Send Message</button>
 
@@ -196,13 +219,13 @@ Send a message directly from the site:
 
 </div>
 
+</section>
+
 <footer>
 
-<p>© 2026 Savich Games</p>
+Savich18 Games © 2026
 
 </footer>
-
-</div>
 
 </body>
 </html>

@@ -1,1 +1,3 @@
-savich18.work.gd
+Host: www
+Type: CNAME
+Value: savich18423.github.io

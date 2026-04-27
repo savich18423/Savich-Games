@@ -40,11 +40,14 @@ margin-bottom:10px;
 width:100%;
 height:260px;
 margin-bottom:30px;
+
 background:
 linear-gradient(to bottom, rgba(5,5,5,0.3), rgba(5,5,5,0.9)),
 url("https://clan.fastly.steamstatic.com/images/45912717/c0e4a7e02228c59118f3396c50fb3d556457911c.png");
+
 background-size:cover;
 background-position:center;
+
 display:flex;
 align-items:flex-end;
 padding:20px;
@@ -58,33 +61,45 @@ letter-spacing:3px;
 color:white;
 }
 
-/* НАВИГАЦИЯ */
 nav{
 font-size:14px;
 margin-top:10px;
 }
+
 nav a{
 color:#9fdfff;
 text-decoration:none;
 margin-right:15px;
 }
+
 nav a:hover{
 color:white;
 }
 
-/* СЕКЦИИ */
 .section{
 margin-top:35px;
 padding-top:20px;
 border-top:1px solid #222;
 }
+
 h2{
 color:white;
 font-size:20px;
 margin-bottom:10px;
 }
 
-/* КНОПКИ */
+.gamebox{
+background:#050505;
+border:1px solid #333;
+padding:20px;
+box-shadow:0 0 10px #000 inset;
+}
+
+.gamebox h3{
+margin-top:0;
+color:white;
+}
+
 button{
 background:#141414;
 border:1px solid #555;
@@ -93,6 +108,7 @@ padding:10px 16px;
 cursor:pointer;
 font-family:Courier New, monospace;
 }
+
 button:hover{
 background:#1f1f1f;
 }
@@ -106,19 +122,23 @@ border:1px solid #444;
 color:white;
 font-family:Courier New, monospace;
 }
+
 input:focus, textarea:focus{
 outline:none;
 border-color:#7ccfff;
 }
+
 .links a{
 display:block;
 color:#9fdfff;
 margin-top:6px;
 text-decoration:none;
 }
+
 .links a:hover{
 color:white;
 }
+
 footer{
 margin-top:40px;
 border-top:1px solid #222;
@@ -127,138 +147,6 @@ font-size:12px;
 color:#777;
 }
 
-/* СТИЛИ ДЛЯ SECTOR GAMMA */
-.gamma-section {
-background: #0a0a0a;
-border: 1px solid #2a2a2a;
-padding: 20px;
-margin-bottom: 25px;
-position: relative;
-}
-.gamma-header-img {
-width: 100%;
-display: block;
-margin-bottom: 15px;
-border-bottom: 1px solid #333;
-}
-.gamma-bg {
-background: url('https://s13.gifyu.com/images/bqXLJ.gif');
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-padding: 20px;
-border: 1px solid #333;
-}
-.gamma-content {
-background: rgba(5,5,5,0.85);
-padding: 20px;
-border: 1px solid #444;
-}
-.gamma-title {
-color: #ffd966;
-font-size: 28px;
-letter-spacing: 4px;
-text-align: center;
-margin-bottom: 5px;
-text-shadow: 2px 2px 0 #000;
-}
-.gamma-subtitle {
-text-align: center;
-color: #aaa;
-font-size: 14px;
-margin-bottom: 20px;
-border-bottom: 1px dashed #444;
-padding-bottom: 10px;
-}
-.gamma-desc {
-font-size: 15px;
-line-height: 1.6;
-margin-bottom: 25px;
-text-align: justify;
-color: #ccc;
-}
-.gamma-features {
-background: #000;
-padding: 15px;
-border-left: 3px solid #ffd966;
-margin-bottom: 25px;
-}
-.gamma-features p {
-margin: 5px 0;
-color: #bbb;
-}
-.gamma-divider {
-text-align: center;
-margin: 25px 0;
-}
-.gamma-divider img {
-width: 80%;
-max-width: 600px;
-opacity: 0.8;
-}
-.gamma-buttons {
-display: flex;
-gap: 20px;
-justify-content: center;
-flex-wrap: wrap;
-margin-top: 20px;
-}
-.gamma-btn {
-background: #1a1a1a;
-border: 2px solid #ffd966;
-color: #ffd966;
-padding: 12px 28px;
-font-size: 16px;
-font-weight: bold;
-letter-spacing: 2px;
-text-transform: uppercase;
-cursor: pointer;
-transition: 0.3s;
-text-decoration: none;
-display: inline-block;
-}
-.gamma-btn:hover {
-background: #ffd966;
-color: #000;
-border-color: #fff;
-}
-.gamma-btn.disabled {
-border-color: #555;
-color: #777;
-cursor: not-allowed;
-pointer-events: none;
-background: #111;
-}
-.gamma-fest {
-margin-top: 25px;
-background: #0f0f0f;
-padding: 15px;
-border: 1px solid #333;
-display: flex;
-align-items: center;
-gap: 20px;
-}
-.gamma-fest img {
-width: 160px;
-border: 1px solid #444;
-}
-.gamma-fest-text {
-color: #ccc;
-font-size: 13px;
-}
-.gamma-fest-text strong {
-color: #ffd966;
-}
-.gamma-gameplay-box {
-margin: 20px 0;
-background: #050505;
-padding: 15px;
-border: 1px solid #333;
-}
-.gamma-gameplay-box h4 {
-color: #ffd966;
-margin-top: 0;
-}
 </style>
 </head>
 
@@ -267,161 +155,117 @@ margin-top: 0;
 <div class="container">
 
 <header>
+
 <div class="logo">Savich Games</div>
+
 <nav>
 <a href="#home">homepage</a> ...
-<a href="#gamma">sector gamma</a> ...
-<a href="#game">the subject</a> ...
+<a href="#game">game</a> ...
 <a href="#about">about</a> ...
 <a href="#contact">contact</a>
 </nav>
+
 </header>
 
 <!-- ОБЛОЖКА -->
+
 <div class="hero">
 <h1>SAVICH GAMES</h1>
 </div>
 
-<!-- HOMEPAGE -->
 <div id="home">
+
 <h2>Welcome</h2>
-<p>Welcome to Savich Games. I create experimental indie games and strange interactive worlds.</p>
-<p>Most projects focus on atmosphere, mysterious locations and experimental mechanics.</p>
-</div>
 
-<!-- ========== SECTOR GAMMA (НОВАЯ ИГРА) ========== -->
-<div class="section" id="gamma">
-<h2 style="color:#ffd966;">■ New Project: Sector Gamma</h2>
-
-<div class="gamma-bg">
-<div class="gamma-content">
-
-<!-- Верхнее изображение -->
-<img src="https://s13.gifyu.com/images/bqXHx.gif" alt="Sector Gamma Header" class="gamma-header-img">
-
-<!-- Название -->
-<div class="gamma-title">SECTOR GAMMA</div>
-<div class="gamma-subtitle">You reap what you sow</div>
-
-<!-- Короткое описание -->
-<p class="gamma-desc">
-<strong>1968 год. Разгар Холодной войны.</strong> Безликий мужчина с грузом детских травм подписывает 7-дневный контракт ради денег. Ему предстоит утилизировать мусор, оставшийся со времен Второй мировой войны. Однако этот мусор — не обычный. Заработайте деньги, переживите страх, <span style="color:#ffd966;">ВЫЖИВИТЕ</span>.
+<p>
+Welcome to Savich Games. I create experimental indie games and strange interactive worlds.
 </p>
 
-<!-- Разделитель -->
-<div class="gamma-divider">
-<img src="https://s13.gifyu.com/images/bqXHI.png" alt="Divider">
-</div>
-
-<!-- Сюжет и лор -->
-<div class="gamma-gameplay-box">
-<h4>📜 СЮЖЕТ И ЛОР</h4>
-<p>1944 год. Уральские горы. В разгар войны советское руководство инициирует проект «Гамма». Были построены два идентичных завода-близнеца. Официально — для производства тяжелой техники. В реальности — для изучения и обуздания аномальных свойств материи, найденной в ходе секретных раскопок. Это должно было стать «оружием возмездия», способным стереть фашизм с лица земли.</p>
-<p>Война закончилась, но аномалии остались. На протяжении 24 лет ученые пытались стабилизировать объекты, но безуспешно. В 1968 году был разработан «Сканер» — устройство, позволяющее идентифицировать степень заражения. Была объявлена программа «700»: семьсот добровольцев (или тех, у кого не было выбора) были отправлены в недра Урала. Вы — один из них. Безликий человек, чье прошлое стерто детской травмой, а будущее зависит от того, насколько быстро вы сможете бросать мусор в яму.</p>
-</div>
-
-<!-- Геймплей -->
-<div class="gamma-gameplay-box">
-<h4>⚙️ РАСШИРЕННЫЙ ГЕЙМПЛЕЙ</h4>
-<p>🔹 <strong>Конвейер Смерти:</strong> Ваша смена длится бесконечно долго. По конвейеру движется «мусор» — от ржавых касок вермахта до непонятных пульсирующих механизмов. С помощью «Сканера» определяйте тип объекта. Обычный металл идет в переработку, но «Зараженные» артефакты должны быть немедленно сброшены в Безликую Яму.</p>
-<p>🔹 <strong>Ритуал Сожжения:</strong> Яма — живой реактор. Чтобы он мог «переварить» аномальный мусор, вы должны вручную заправлять его углем. Если пламя погаснет, то, что вы туда бросили, может попытаться вылезти обратно.</p>
-<p>🔹 <strong>Психологическая Разгрузка:</strong> Работа в Секторе сводит с ума. Курите крепкие папиросы, слушайте музыку на проигрывателе. Это не просто механика — это ваш единственный способ не стать частью этого мусора.</p>
-<p>🔹 <strong>Сны и Кассеты:</strong> Каждую ночь герой видит сюрреалистичные сны. Находите аудиокассеты, оставленные предыдущими 699 участниками. Сопоставляя сны и записи, вы сможете раскрыть истинную цель Sector Gamma.</p>
-</div>
-
-<!-- Глубокие механики -->
-<div class="gamma-gameplay-box">
-<h4>🔩 ГЛУБОКИЕ МЕХАНИКИ</h4>
-<p>• <strong>Менеджмент Энергоблока:</strong> Двери потребляют колоссальное количество энергии. Слушайте звуки в вентиляции. Скрежет или шепот — закрывайте заслонку немедленно.</p>
-<p>• <strong>Генераторный Отсек:</strong> Периодически вам придется покидать безопасный пост, чтобы вручную чинить или заправлять генераторы в темных коридорах.</p>
-<p>• <strong>Ежедневный Выбор Сектора:</strong> Каждое утро Сектор выдает «паек» в виде улучшений. Выбирайте одно из трех. Ошибка может стоить жизни на 4-й или 5-й день.</p>
-<p>• <strong>Магазин Улучшений:</strong> Зарабатывайте трудодни и тратьте их в терминале. Покупайте новые инструменты, увеличивайте объем угольного отсека или заказывайте новые кассеты с музыкой.</p>
-</div>
-
-<!-- Особенности -->
-<div class="gamma-gameplay-box">
-<h4>💡 ОСОБЕННОСТИ ИГРЫ</h4>
-<p>1. <strong>Эффект Постеризации:</strong> Уникальный визуальный фильтр — грязное, высококонтрастное полотно, старая советская пленка.</p>
-<p>2. <strong>Звуковой Ландшафт:</strong> Продвинутый 8D-звук. Слышите, как что-то ползает под полом, как капает масло и меняется гул Ямы.</p>
-<p>3. <strong>Советский Ретро-Футуризм:</strong> Аутентичная атмосфера 60-х. Массивные кнопки, тумблеры, аналоговые датчики, плакаты по технике безопасности.</p>
-<p>4. <strong>Система Ошибок:</strong> Игра не прощает невнимательности. Ошиблись при сортировке? Кровь. Забыли закрыть дверь? Смена закончится раньше времени.</p>
-<p>5. <strong>Процедурный Мусор:</strong> Каждый рабочий день уникален. Объекты на конвейере генерируются случайным образом.</p>
-</div>
-
-<!-- Разделитель -->
-<div class="gamma-divider">
-<img src="https://s13.gifyu.com/images/bqXHI.png" alt="Divider">
-</div>
-
-<!-- Кнопки -->
-<div class="gamma-buttons">
-<a href="#" class="gamma-btn">🥇 WISHLIST NOW (СКОРО)</a>
-</div>
-<p style="text-align:center; color:#777; font-size:12px; margin-top:10px;">*Кнопка wishlist пока не активна — игра еще не создана в Steam</p>
-
-<!-- Фестиваль -->
-<div class="gamma-fest">
-<img src="https://s13.gifyu.com/images/bqXHC.png" alt="Steam Fest 2026">
-<div class="gamma-fest-text">
-<strong>🕹️ ДЕМКА БУДЕТ ДОСТУПНА</strong><br>
-<strong>Октябрьский фестиваль «Играм быть» 2026 года в Steam</strong><br><br>
-Многодневный праздник, во время которого можно играть в различные демоверсии, общаться с разработчиками, смотреть трансляции и узнавать о готовящихся к выходу играх.<br><br>
-📅 <strong>20:00 19 октября — 20:00 26 октября 2026 (по Москве)</strong>
-</div>
-</div>
-
-<!-- Релиз -->
-<p style="text-align:center; margin-top:25px; font-size:18px; color:#ffd966; letter-spacing:2px;">
-🎯 ИГРА РЕЛИЗ В 2026 ГОДУ ОСЕНЬЮ
+<p>
+Most projects focus on atmosphere, mysterious locations and experimental mechanics.
 </p>
 
 </div>
-</div>
-</div>
 
-<!-- ========== THE SUBJECT (СТАРАЯ ИГРА) ========== -->
 <div class="section" id="game">
+
 <h2>Featured Project</h2>
-<div class="gamebox" style="background:#050505; border:1px solid #333; padding:20px;">
+
+<div class="gamebox">
+
 <h3>The Subject: Protocol Zero</h3>
-<p>Turn on your camera. Institute Zero pays for your pain. The game uses your webcam and microphone, turning the room into a lab.</p>
-<p>Complete four stages: from the blink ban to the "Green Light, Red Light" game. Money or sanity? Be the first to complete Protocol Zero. If you dare.</p>
+
+<p>
+Turn on your camera. Institute Zero pays for your pain. The game uses your webcam and microphone, turning the room into a lab.
+</p>
+
+<p>
+Complete four stages: from the blink ban to the "Green Light, Red Light" game. Money or sanity? Be the first to complete Protocol Zero. If you dare.
+</p>
+
 <a href="https://store.steampowered.com/app/4287530/The_subject_Protocol_zero/">
 <button>Play on Steam</button>
 </a>
-</div>
+
 </div>
 
-<!-- ABOUT -->
+</div>
+
 <div class="section" id="about">
+
 <h2>About</h2>
-<p>My name is Zakhar. I am an indie game developer from Russia currently living in Vietnam.</p>
-<p>I develop games using Unity and mainly focus on atmospheric 3D environments.</p>
-<p>Savich Games is my personal indie project where I release demos, prototypes and experiments.</p>
+
+<p>
+My name is Zakhar. I am an indie game developer from Russia currently living in Vietnam.
+</p>
+
+<p>
+I develop games using Unity and mainly focus on atmospheric 3D environments.
+</p>
+
+<p>
+Savich Games is my personal indie project where I release demos, prototypes and experiments.
+</p>
+
 <div class="links">
+
 <strong>Links</strong>
+
 <a href="https://www.youtube.com/@Savich18Company">YouTube</a>
 <a href="https://store.steampowered.com/curator/45912717-Savich18-Games/">Steam Curator</a>
 <a href="https://store.steampowered.com/app/4332220/The_subject_Protocol_zero_Demo/">Game Demo</a>
-</div>
+
 </div>
 
-<!-- CONTACT -->
+</div>
+
 <div class="section" id="contact">
+
 <h2>Contact</h2>
+
 <p>Send a message:</p>
+
 <form action="https://formspree.io/f/mgoneayw" method="POST">
+
 <input type="text" name="name" placeholder="Your name" required>
+
 <input type="email" name="email" placeholder="Your email" required>
+
 <textarea name="message" rows="6" placeholder="Your message" required></textarea>
+
 <button type="submit">Send Message</button>
+
 </form>
+
 </div>
 
 <footer>
+
 <p>© 2026 Savich Games</p>
+
 </footer>
 
 </div>
+
 </body>
 </html>

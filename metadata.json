@@ -1,0 +1,9 @@
+{
+  "name": "Savich18-Games",
+  "description": "Indie game studio focusing on atmospheric 3D environments and unique horror experiences.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": []
+}

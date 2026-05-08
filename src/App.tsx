@@ -85,6 +85,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-black selection:bg-red-600/30 overflow-x-hidden cursor-none">
+      <div className="noise-grain" />
       {/* Ordinary Custom Cursor */}
       <div 
         className="fixed pointer-events-none z-[2000] hidden md:block w-4 h-4 border border-white/50 rounded-full"
@@ -427,10 +428,10 @@ export default function App() {
                     <span className="text-gray-600 font-mono text-xs font-bold tracking-widest italic">{t.games.status_classified}</span>
                     <div className="w-12 h-[1px] bg-gray-600" />
                   </div>
-                  <h3 className="text-4xl md:text-6xl font-display text-transparent bg-clip-text bg-gradient-to-r from-red-900 via-gray-400 to-red-900 uppercase italic mb-4 leading-none blur-[0.5px]">
+                  <h3 className="text-4xl md:text-6xl font-display text-transparent bg-clip-text bg-gradient-to-r from-red-900 via-gray-400 to-red-900 uppercase italic mb-4 leading-none blur-[0.3px] group-hover:blur-0 transition-all duration-500">
                     YAPOAM
                   </h3>
-                  <p className="text-red-950 font-serif italic text-sm tracking-wider uppercase">
+                  <p className="text-red-950 font-serif italic text-sm tracking-[0.3em] uppercase opacity-60 group-hover:opacity-100 transition-opacity">
                     The city is no longer the same.
                   </p>
                   <div className="inline-block p-4 border-l-8 border-gray-900 bg-gray-900/20 text-xs text-gray-500 font-mono font-bold uppercase tracking-[0.5em] mt-6">

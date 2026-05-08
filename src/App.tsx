@@ -346,7 +346,7 @@ export default function App() {
                   <div className="absolute -inset-2 bg-red-600/20 blur opacity-0 group-hover:opacity-100 transition duration-500" />
                   <img 
                     src="https://i.ibb.co/j9nC2MST/header.jpg" 
-                    className="relative w-full aspect-video object-cover grayscale brightness-75 border border-red-900 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" 
+                    className="relative w-full aspect-video object-cover grayscale brightness-75 border border-red-900 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700 crt-flicker" 
                     alt="Protocol Zero"
                   />
                   {/* Tactical readout overlay */}
@@ -395,7 +395,7 @@ export default function App() {
                   <div className="absolute -inset-2 bg-orange-600/10 blur opacity-0 group-hover:opacity-100 transition duration-500" />
                   <img 
                     src="https://i.ibb.co/23dv1zhW/image.png" 
-                    className="relative w-full aspect-video object-cover grayscale brightness-50 border border-orange-900/50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" 
+                    className="relative w-full aspect-video object-cover grayscale brightness-50 border border-orange-900/50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700 crt-flicker" 
                     alt="Sector Gamma"
                   />
                   {/* Tactical readout overlay */}
@@ -444,9 +444,10 @@ export default function App() {
               </div>
 
               <div className="md:w-1/2 md:pl-20 pl-16 md:pl-20 opacity-20">
-                <div className="w-full aspect-[21/9] bg-gradient-to-r from-transparent via-red-950/20 to-transparent flex items-center justify-center border border-white/5 relative overflow-hidden">
+                <div className="w-full aspect-[21/9] bg-gradient-to-r from-transparent via-red-950/20 to-transparent flex items-center justify-center border border-white/5 relative overflow-hidden classified-glitch group">
                    <div className="absolute inset-0 scanlines" />
                    <span className="text-[10px] font-mono text-red-900 uppercase tracking-[1em] animate-pulse">2027_SIGNAL_LOST</span>
+                   <div className="absolute inset-0 bg-red-600/5 group-hover:bg-red-600/10 transition-colors" />
                 </div>
               </div>
             </div>

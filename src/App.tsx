@@ -495,7 +495,7 @@ export default function App() {
         </div>
       </section>
 
-              {/* Support / Donation Section */}
+                    {/* Support / Donation Section */}
       <section className="py-32 px-6 bg-[#0a0a0a] relative overflow-hidden border-y-4 border-red-900/30">
         <div className="absolute inset-0 opacity-5 pointer-events-none" 
           style={{ 
@@ -504,20 +504,23 @@ export default function App() {
           }} 
         />
         
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-red-600 to-transparent opacity-30" />
+        <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-red-600 to-transparent opacity-30" />
+        
         <div className="max-w-4xl mx-auto relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
-            <div className="inline-block px-4 py-1 border border-red-900 bg-red-950/30 text-red-600 font-mono text-[10px] tracking-[0.5em] uppercase mb-6">
+            <div className="inline-block px-6 py-2 border border-red-900 bg-red-950/20 text-red-600 font-mono text-[10px] tracking-[0.5em] uppercase mb-6">
               OFFICIAL DONATION SYSTEM
             </div>
             <h2 className="text-5xl md:text-7xl font-display text-white uppercase italic tracking-tighter text-3d">
               SUPPORT <span className="text-red-700">SAVICH18</span>
             </h2>
             <div className="w-24 h-[2px] bg-red-600 mx-auto mt-6 shadow-[0_0_20px_rgba(220,38,38,0.5)]" />
-            <p className="text-gray-400 text-sm font-mono tracking-[0.3em] uppercase mt-6">
+            <p className="text-gray-500 text-sm font-mono tracking-[0.3em] uppercase mt-6">
               YOUR SUPPORT HELPS US CREATE BETTER GAMES
             </p>
           </motion.div>
@@ -539,7 +542,7 @@ export default function App() {
               whileTap={{ scale: 0.95 }}
               className="inline-block px-16 py-8 bg-gradient-to-r from-red-700 to-red-900 hover:from-black hover:to-red-900 border-2 border-red-600 text-white font-bold tracking-[0.3em] uppercase text-2xl transition-all duration-300 relative overflow-hidden group"
             >
-              <span className="relative z-10">💰 DONATE NOW</span>
+              <span className="relative z-10">DONATE NOW</span>
               <div className="absolute inset-0 bg-white/5 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
             </motion.a>
             
@@ -570,33 +573,43 @@ export default function App() {
                       <span className="block text-[8px] text-gray-600 font-mono tracking-widest">MINIMUM</span>
                     </td>
                     <td className="p-4">
-                      <span className="text-gray-300 font-bold text-lg">Your name in credits</span>
-                      <span className="block text-gray-500 text-xs font-mono tracking-wider mt-1">as "Support Agent"</span>
+                      <span className="text-gray-400 text-sm font-mono">Support the project</span>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-white/5 transition-colors border-l-2 border-red-600">
+                    <td className="p-4 text-white font-display text-xl">
+                      5$+
+                      <span className="block text-[8px] text-red-500 font-mono tracking-widest">SPECIAL</span>
+                    </td>
+                    <td className="p-4">
+                      <span className="text-red-500 font-bold text-lg tracking-wider">YOUR NAME IN GAME CREDITS</span>
+                      <span className="block text-gray-400 text-xs font-mono mt-1">Highlighted in red color</span>
+                      <span className="block text-gray-500 text-[10px] font-mono mt-2 italic">Write your nickname in donation comment</span>
                     </td>
                   </tr>
                   <tr className="hover:bg-white/5 transition-colors">
                     <td className="p-4 text-white font-display text-xl">10$+</td>
                     <td className="p-4 text-gray-400 text-sm font-mono">
-                      Name in credits + <span className="text-red-500 font-bold">exclusive concept art</span> with developer signature
+                      Name in credits + exclusive concept art with developer signature
                     </td>
                   </tr>
                   <tr className="hover:bg-white/5 transition-colors">
                     <td className="p-4 text-white font-display text-xl">50$+</td>
                     <td className="p-4 text-gray-400 text-sm font-mono">
-                      All above + <span className="text-red-500 font-bold">early access</span> 2 months before release
+                      All above + early access 2 months before release
                     </td>
                   </tr>
                   <tr className="hover:bg-white/5 transition-colors">
                     <td className="p-4 text-white font-display text-xl">100$+</td>
                     <td className="p-4 text-gray-400 text-sm font-mono">
-                      All above + <span className="text-red-500 font-bold">custom character or enemy</span> with your name in the game
+                      All above + custom character or enemy with your name in the game
                     </td>
                   </tr>
                   <tr className="hover:bg-white/5 transition-colors border-t-2 border-red-900/30">
                     <td className="p-4 text-white font-display text-2xl text-red-600">500$+</td>
                     <td className="p-4">
-                      <span className="text-red-500 font-bold text-lg tracking-wider">🏆 "SHADOW PRODUCER"</span>
-                      <span className="block text-gray-400 text-xs font-mono mt-1">— name on main screen, closed builds access, direct chat with developer</span>
+                      <span className="text-red-500 font-bold text-lg tracking-wider">"SHADOW PRODUCER"</span>
+                      <span className="block text-gray-400 text-xs font-mono mt-1">Name on main screen, closed builds access, direct chat with developer</span>
                     </td>
                   </tr>
                 </tbody>
@@ -604,16 +617,32 @@ export default function App() {
             </div>
           </motion.div>
 
+          {/* Important Note */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="mt-8 p-6 border border-red-900/20 bg-red-950/10 text-center"
+          >
+            <p className="text-gray-400 text-[10px] font-mono tracking-[0.2em] uppercase leading-relaxed">
+              IMPORTANT: WRITE YOUR NICKNAME IN THE DONATION COMMENT<br />
+              IF WE DID NOT ADD YOU TO THE CREDITS, PLEASE CONTACT US AND WE WILL ADD YOU
+            </p>
+            <p className="text-gray-600 text-[8px] font-mono tracking-[0.3em] uppercase mt-3">
+              savich18.company@gmail.com
+            </p>
+          </motion.div>
+
           <div className="mt-12 text-center">
             <div className="inline-block border border-white/5 px-8 py-4 bg-black/40">
               <p className="text-gray-600 text-[9px] font-mono tracking-[0.3em] uppercase leading-relaxed">
-                EVERY DONATION HELPS US IMPROVE OUR GAMES.<br />
-                THANK YOU FOR YOUR SUPPORT!
+                EVERY DONATION HELPS US IMPROVE OUR GAMES<br />
+                THANK YOU FOR YOUR SUPPORT
               </p>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links - ONLY DonationAlerts */}
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a 
               href="https://www.donationalerts.com/r/official_savich18"
@@ -621,13 +650,6 @@ export default function App() {
               className="text-[8px] font-mono text-gray-600 hover:text-red-600 transition-colors uppercase tracking-[0.3em] border border-white/5 px-4 py-2 hover:border-red-600"
             >
               DonationAlerts
-            </a>
-            <a 
-              href="https://boosty.to/savich18"
-              target="_blank"
-              className="text-[8px] font-mono text-gray-600 hover:text-orange-600 transition-colors uppercase tracking-[0.3em] border border-white/5 px-4 py-2 hover:border-orange-600"
-            >
-              Boosty
             </a>
           </div>
         </div>

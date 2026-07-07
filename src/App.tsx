@@ -495,6 +495,144 @@ export default function App() {
         </div>
       </section>
 
+              {/* Support / Donation Section */}
+      <section className="py-32 px-6 bg-[#0a0a0a] relative overflow-hidden border-y-4 border-red-900/30">
+        <div className="absolute inset-0 opacity-5 pointer-events-none" 
+          style={{ 
+            backgroundImage: "radial-gradient(circle, #ff0000 1px, transparent 1px)", 
+            backgroundSize: "40px 40px" 
+          }} 
+        />
+        
+        <div className="max-w-4xl mx-auto relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-block px-4 py-1 border border-red-900 bg-red-950/30 text-red-600 font-mono text-[10px] tracking-[0.5em] uppercase mb-6">
+              OFFICIAL DONATION SYSTEM
+            </div>
+            <h2 className="text-5xl md:text-7xl font-display text-white uppercase italic tracking-tighter text-3d">
+              SUPPORT <span className="text-red-700">SAVICH18</span>
+            </h2>
+            <div className="w-24 h-[2px] bg-red-600 mx-auto mt-6 shadow-[0_0_20px_rgba(220,38,38,0.5)]" />
+            <p className="text-gray-400 text-sm font-mono tracking-[0.3em] uppercase mt-6">
+              YOUR SUPPORT HELPS US CREATE BETTER GAMES
+            </p>
+          </motion.div>
+
+          {/* Donation Button */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1 }}
+            className="text-center mb-16"
+          >
+            <motion.a
+              href="https://www.donationalerts.com/r/official_savich18"
+              target="_blank"
+              whileHover={{ 
+                scale: 1.05, 
+                boxShadow: "0 0 60px rgba(220, 38, 38, 0.4)"
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block px-16 py-8 bg-gradient-to-r from-red-700 to-red-900 hover:from-black hover:to-red-900 border-2 border-red-600 text-white font-bold tracking-[0.3em] uppercase text-2xl transition-all duration-300 relative overflow-hidden group"
+            >
+              <span className="relative z-10">💰 DONATE NOW</span>
+              <div className="absolute inset-0 bg-white/5 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+            </motion.a>
+            
+            <p className="text-gray-600 text-[10px] font-mono tracking-[0.2em] uppercase mt-4">
+              donationalerts.com/r/official_savich18
+            </p>
+          </motion.div>
+
+          {/* Bonus Table */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="border border-white/5 bg-black/60 backdrop-blur-sm overflow-hidden rounded-sm"
+          >
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-red-900/30 bg-red-950/20">
+                    <th className="p-4 text-left text-[10px] font-bold tracking-[0.3em] text-red-500 uppercase">AMOUNT</th>
+                    <th className="p-4 text-left text-[10px] font-bold tracking-[0.3em] text-red-500 uppercase">REWARD</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/5">
+                  <tr className="hover:bg-white/5 transition-colors">
+                    <td className="p-4 text-white font-display text-xl">
+                      2$+
+                      <span className="block text-[8px] text-gray-600 font-mono tracking-widest">MINIMUM</span>
+                    </td>
+                    <td className="p-4">
+                      <span className="text-gray-300 font-bold text-lg">Your name in credits</span>
+                      <span className="block text-gray-500 text-xs font-mono tracking-wider mt-1">as "Support Agent"</span>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-white/5 transition-colors">
+                    <td className="p-4 text-white font-display text-xl">10$+</td>
+                    <td className="p-4 text-gray-400 text-sm font-mono">
+                      Name in credits + <span className="text-red-500 font-bold">exclusive concept art</span> with developer signature
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-white/5 transition-colors">
+                    <td className="p-4 text-white font-display text-xl">50$+</td>
+                    <td className="p-4 text-gray-400 text-sm font-mono">
+                      All above + <span className="text-red-500 font-bold">early access</span> 2 months before release
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-white/5 transition-colors">
+                    <td className="p-4 text-white font-display text-xl">100$+</td>
+                    <td className="p-4 text-gray-400 text-sm font-mono">
+                      All above + <span className="text-red-500 font-bold">custom character or enemy</span> with your name in the game
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-white/5 transition-colors border-t-2 border-red-900/30">
+                    <td className="p-4 text-white font-display text-2xl text-red-600">500$+</td>
+                    <td className="p-4">
+                      <span className="text-red-500 font-bold text-lg tracking-wider">🏆 "SHADOW PRODUCER"</span>
+                      <span className="block text-gray-400 text-xs font-mono mt-1">— name on main screen, closed builds access, direct chat with developer</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </motion.div>
+
+          <div className="mt-12 text-center">
+            <div className="inline-block border border-white/5 px-8 py-4 bg-black/40">
+              <p className="text-gray-600 text-[9px] font-mono tracking-[0.3em] uppercase leading-relaxed">
+                EVERY DONATION HELPS US IMPROVE OUR GAMES.<br />
+                THANK YOU FOR YOUR SUPPORT!
+              </p>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a 
+              href="https://www.donationalerts.com/r/official_savich18"
+              target="_blank"
+              className="text-[8px] font-mono text-gray-600 hover:text-red-600 transition-colors uppercase tracking-[0.3em] border border-white/5 px-4 py-2 hover:border-red-600"
+            >
+              DonationAlerts
+            </a>
+            <a 
+              href="https://boosty.to/savich18"
+              target="_blank"
+              className="text-[8px] font-mono text-gray-600 hover:text-orange-600 transition-colors uppercase tracking-[0.3em] border border-white/5 px-4 py-2 hover:border-orange-600"
+            >
+              Boosty
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Recruitment Section */}
       <section className="py-32 px-6 bg-black torn-edge-top">
         <div className="max-w-6xl mx-auto">

@@ -15,7 +15,6 @@ import {
   Languages
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
-import { useForm, ValidationError } from '@formspree/react';
 
 type Lang = "EN";
 
@@ -70,219 +69,6 @@ const CONTENT = {
   }
 };
 
-// ============================================
-// КОМПОНЕНТ ФОРМЫ ПОДПИСКИ (GIVEAWAY)
-// ============================================
-const GiveawayForm = () => {
-  const [state, handleSubmit] = useForm('mnjkrrjg');
-  
-  if (state.succeeded) {
-    return (
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="relative p-8 border-2 border-red-600/50 bg-black/80"
-      >
-        <div className="text-6xl mb-4">📡</div>
-        <h3 className="text-2xl font-display text-red-600 uppercase tracking-widest mb-2">
-          СИГНАЛ ПРИНЯТ!
-        </h3>
-        <p className="text-gray-400 font-mono text-sm">
-          ВЫ ДОБАВЛЕНЫ В СПИСОК ОПОВЕЩЕНИЯ. ОЖИДАЙТЕ КОД ДОСТУПА.
-        </p>
-      </motion.div>
-    );
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="relative flex flex-col md:flex-row gap-0 border-2 border-white/10 overflow-hidden">
-      <input type="hidden" name="_subject" value="GIVEAWAY ENTRY: SECTOR GAMMA" />
-      <input 
-        type="email" 
-        name="email" 
-        placeholder="IDENTIFICATION@VOID.COM" 
-        required 
-        className="flex-grow bg-black/80 p-6 outline-none font-mono text-xl text-white placeholder:text-gray-700 focus:bg-black transition-colors"
-      />
-      <ValidationError 
-        field="email" 
-        errors={state.errors} 
-        className="text-red-500 text-xs font-mono p-2"
-      />
-      <button 
-        type="submit" 
-        disabled={state.submitting}
-        className="px-12 py-6 bg-red-700 hover:bg-black hover:text-red-600 border-t-2 md:border-t-0 md:border-l-2 border-red-600 text-white font-bold tracking-widest transition-all uppercase text-sm active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {state.submitting ? 'ОТПРАВКА...' : 'SUBMIT'}
-      </button>
-    </form>
-  );
-};
-
-// ============================================
-// КОМПОНЕНТ ФОРМЫ ВАКАНСИЙ (RECRUITMENT)
-// ============================================
-const RecruitmentForm = () => {
-  const [state, handleSubmit] = useForm('mnjkrrjg');
-  
-  if (state.succeeded) {
-    return (
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="relative w-full p-10 border-2 border-green-600/50 bg-black/80 text-center"
-      >
-        <div className="text-6xl mb-4">✅</div>
-        <h3 className="text-2xl font-display text-green-500 uppercase tracking-widest mb-2">
-          ЗАЯВКА ПРИНЯТА
-        </h3>
-        <p className="text-gray-400 font-mono text-sm">
-          МЫ СВЯЖЕМСЯ С ВАМИ В БЛИЖАЙШЕЕ ВРЕМЯ.
-        </p>
-      </motion.div>
-    );
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="relative w-full space-y-6 p-10 border-2 border-white/5 bg-black/60 backdrop-blur-xl">
-      <input type="hidden" name="_subject" value="JOB APPLICATION: SAVICH18" />
-      
-      <div className="space-y-2">
-        <div className="text-[10px] font-bold text-red-600 ml-1 uppercase">NAME</div>
-        <input 
-          type="text" 
-          name="name" 
-          required 
-          className="w-full bg-white/5 border border-white/10 p-5 outline-none focus:border-red-700 font-mono text-lg text-white" 
-        />
-        <ValidationError field="name" errors={state.errors} className="text-red-500 text-xs font-mono" />
-      </div>
-      
-      <div className="space-y-2">
-        <div className="text-[10px] font-bold text-red-600 ml-1 uppercase">EMAIL</div>
-        <input 
-          type="email" 
-          name="email" 
-          required 
-          className="w-full bg-white/5 border border-white/10 p-5 outline-none focus:border-red-700 font-mono text-lg text-white" 
-        />
-        <ValidationError field="email" errors={state.errors} className="text-red-500 text-xs font-mono" />
-      </div>
-      
-      <div className="space-y-2">
-        <div className="text-[10px] font-bold text-red-600 ml-1 uppercase tracking-widest">YOUR ROLE</div>
-        <select 
-          name="role" 
-          required 
-          className="w-full bg-white/5 border border-white/10 p-5 outline-none focus:border-red-700 font-mono text-lg text-gray-400 appearance-none"
-        >
-          <option value="" disabled selected className="bg-black">SELECT ROLE</option>
-          {CONTENT.recruitment.roles.map((role: string) => (
-            <option key={role} value={role} className="bg-black">{role}</option>
-          ))}
-        </select>
-        <ValidationError field="role" errors={state.errors} className="text-red-500 text-xs font-mono" />
-      </div>
-      
-      <div className="space-y-2">
-        <div className="text-[10px] font-bold text-red-600 ml-1 uppercase tracking-widest">PORTFOLIO / BIO</div>
-        <textarea 
-          name="message" 
-          rows={4} 
-          required 
-          className="w-full bg-white/5 border border-white/10 p-5 outline-none focus:border-red-700 font-mono text-lg text-white resize-none"
-        />
-        <ValidationError field="message" errors={state.errors} className="text-red-500 text-xs font-mono" />
-      </div>
-      
-      <button 
-        type="submit" 
-        disabled={state.submitting}
-        className="w-full py-6 bg-red-700 hover:bg-black text-white hover:text-red-600 border-2 border-red-700 font-bold tracking-[0.4em] uppercase transition-all text-sm active:translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {state.submitting ? 'ОТПРАВКА...' : 'SEND APPLICATION'}
-      </button>
-    </form>
-  );
-};
-
-// ============================================
-// КОМПОНЕНТ ФОРМЫ КОНТАКТОВ (CONTACT)
-// ============================================
-const ContactForm = () => {
-  const [state, handleSubmit] = useForm('mnjkrrjg');
-  
-  if (state.succeeded) {
-    return (
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="p-12 border-2 border-green-600/50 bg-black/80 text-center"
-      >
-        <div className="text-6xl mb-4">📨</div>
-        <h3 className="text-3xl font-display text-green-500 uppercase tracking-widest mb-2">
-          СИГНАЛ ПОЛУЧЕН
-        </h3>
-        <p className="text-gray-400 font-mono text-sm">
-          МЫ ОТВЕТИМ ВАМ В БЛИЖАЙШЕЕ ВРЕМЯ.
-        </p>
-      </motion.div>
-    );
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="space-y-8">
-      <input type="hidden" name="_subject" value="CONTACT FORM: SAVICH18" />
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="space-y-2">
-          <label className="text-[10px] font-bold tracking-widest text-red-600 uppercase ml-2">NAME</label>
-          <input 
-            type="text" 
-            name="name" 
-            required 
-            className="w-full bg-white/5 border-b-2 border-white/10 focus:border-red-600 focus:bg-white/10 outline-none p-4 font-mono text-sm transition-all" 
-          />
-          <ValidationError field="name" errors={state.errors} className="text-red-500 text-xs font-mono block mt-1" />
-        </div>
-        <div className="space-y-2">
-          <label className="text-[10px] font-bold tracking-widest text-red-600 uppercase ml-2">EMAIL</label>
-          <input 
-            type="email" 
-            name="email" 
-            required 
-            className="w-full bg-white/5 border-b-2 border-white/10 focus:border-red-600 focus:bg-white/10 outline-none p-4 font-mono text-sm transition-all" 
-          />
-          <ValidationError field="email" errors={state.errors} className="text-red-500 text-xs font-mono block mt-1" />
-        </div>
-      </div>
-      
-      <div className="space-y-2">
-        <label className="text-[10px] font-bold tracking-widest text-red-600 uppercase ml-2">MESSAGE</label>
-        <textarea 
-          name="message" 
-          rows={6} 
-          required 
-          className="w-full bg-white/5 border-b-2 border-white/10 focus:border-red-600 focus:bg-white/10 outline-none p-4 font-mono text-sm transition-all resize-none"
-        />
-        <ValidationError field="message" errors={state.errors} className="text-red-500 text-xs font-mono block mt-1" />
-      </div>
-      
-      <button 
-        type="submit" 
-        disabled={state.submitting}
-        className="w-full py-5 bg-red-700 hover:bg-black hover:text-red-600 border border-red-700 font-bold uppercase tracking-[0.3em] transition-all text-sm disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {state.submitting ? 'ОТПРАВКА...' : 'TRANSMIT'}
-      </button>
-    </form>
-  );
-};
-
-// ============================================
-// ОСНОВНОЙ КОМПОНЕНТ APP
-// ============================================
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -674,7 +460,26 @@ export default function App() {
             
             <div className="relative group max-w-2xl mx-auto">
               <div className="absolute -inset-1 bg-red-600 blur opacity-20 group-hover:opacity-40 transition" />
-              <GiveawayForm />
+              <form 
+                action="https://formspree.io/f/mnjkrrjg" 
+                method="POST"
+                className="relative flex flex-col md:flex-row gap-0 border-2 border-white/10 overflow-hidden"
+              >
+                <input type="hidden" name="_subject" value="GIVEAWAY ENTRY: SECTOR GAMMA" />
+                <input 
+                  type="email" 
+                  name="email" 
+                  placeholder={t.giveaway.placeholder} 
+                  required 
+                  className="flex-grow bg-black/80 p-6 outline-none font-mono text-xl text-white placeholder:text-gray-700 focus:bg-black transition-colors"
+                />
+                <button 
+                  type="submit"
+                  className="px-12 py-6 bg-red-700 hover:bg-black hover:text-red-600 border-t-2 md:border-t-0 md:border-l-2 border-red-600 text-white font-bold tracking-widest transition-all uppercase text-sm active:scale-95"
+                >
+                  {t.giveaway.button}
+                </button>
+              </form>
             </div>
           </div>
         </section>
@@ -713,7 +518,64 @@ export default function App() {
                 className="w-full relative"
               >
                 <div className="absolute -inset-4 bg-red-900/5 blur-2xl" />
-                <RecruitmentForm />
+                <form 
+                  action="https://formspree.io/f/mnjkrrjg" 
+                  method="POST"
+                  className="relative w-full space-y-6 p-10 border-2 border-white/5 bg-black/60 backdrop-blur-xl"
+                >
+                  <input type="hidden" name="_subject" value="JOB APPLICATION: SAVICH18" />
+                  
+                  <div className="space-y-2">
+                    <div className="text-[10px] font-bold text-red-600 ml-1 uppercase">NAME</div>
+                    <input 
+                      type="text" 
+                      name="name" 
+                      required 
+                      className="w-full bg-white/5 border border-white/10 p-5 outline-none focus:border-red-700 font-mono text-lg text-white" 
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <div className="text-[10px] font-bold text-red-600 ml-1 uppercase">EMAIL</div>
+                    <input 
+                      type="email" 
+                      name="email" 
+                      required 
+                      className="w-full bg-white/5 border border-white/10 p-5 outline-none focus:border-red-700 font-mono text-lg text-white" 
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <div className="text-[10px] font-bold text-red-600 ml-1 uppercase tracking-widest">YOUR ROLE</div>
+                    <select 
+                      name="role" 
+                      required 
+                      className="w-full bg-white/5 border border-white/10 p-5 outline-none focus:border-red-700 font-mono text-lg text-gray-400 appearance-none"
+                    >
+                      <option value="" disabled selected className="bg-black">SELECT ROLE</option>
+                      {t.recruitment.roles.map((role: string) => (
+                        <option key={role} value={role} className="bg-black">{role}</option>
+                      ))}
+                    </select>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <div className="text-[10px] font-bold text-red-600 ml-1 uppercase tracking-widest">PORTFOLIO / BIO</div>
+                    <textarea 
+                      name="message" 
+                      rows={4} 
+                      required 
+                      className="w-full bg-white/5 border border-white/10 p-5 outline-none focus:border-red-700 font-mono text-lg text-white resize-none"
+                    />
+                  </div>
+                  
+                  <button 
+                    type="submit"
+                    className="w-full py-6 bg-red-700 hover:bg-black text-white hover:text-red-600 border-2 border-red-700 font-bold tracking-[0.4em] uppercase transition-all text-sm active:translate-y-1"
+                  >
+                    {t.recruitment.submit}
+                  </button>
+                </form>
               </motion.div>
             </div>
           </div>
@@ -726,7 +588,53 @@ export default function App() {
               <h2 className="text-6xl font-display text-white uppercase italic text-3d">{t.contact.title}</h2>
               <div className="w-32 h-1 bg-red-700 mx-auto mt-4" />
             </div>
-            <ContactForm />
+
+            <form 
+              action="https://formspree.io/f/mnjkrrjg" 
+              method="POST"
+              className="space-y-8"
+            >
+              <input type="hidden" name="_subject" value="CONTACT FORM: SAVICH18" />
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold tracking-widest text-red-600 uppercase ml-2">{t.contact.name}</label>
+                  <input 
+                    type="text" 
+                    name="name" 
+                    required 
+                    className="w-full bg-white/5 border-b-2 border-white/10 focus:border-red-600 focus:bg-white/10 outline-none p-4 font-mono text-sm transition-all" 
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold tracking-widest text-red-600 uppercase ml-2">{t.contact.email}</label>
+                  <input 
+                    type="email" 
+                    name="email" 
+                    required 
+                    className="w-full bg-white/5 border-b-2 border-white/10 focus:border-red-600 focus:bg-white/10 outline-none p-4 font-mono text-sm transition-all" 
+                  />
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <label className="text-[10px] font-bold tracking-widest text-red-600 uppercase ml-2">{t.contact.message}</label>
+                <textarea 
+                  name="message" 
+                  rows={6} 
+                  required 
+                  className="w-full bg-white/5 border-b-2 border-white/10 focus:border-red-600 focus:bg-white/10 outline-none p-4 font-mono text-sm transition-all resize-none"
+                />
+              </div>
+              
+              <button 
+                type="submit"
+                className="w-full py-5 bg-red-700 hover:bg-black hover:text-red-600 border border-red-700 font-bold uppercase tracking-[0.3em] transition-all text-sm"
+              >
+                {t.contact.send}
+              </button>
+            </form>
+
             <div className="mt-24 text-center">
               <div className="font-display text-4xl text-white/5 italic select-none">SAVICH18 // 2026</div>
             </div>

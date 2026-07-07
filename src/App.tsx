@@ -473,7 +473,7 @@ export default function App() {
           
           <div className="relative group max-w-2xl mx-auto">
             <div className="absolute -inset-1 bg-red-600 blur opacity-20 group-hover:opacity-40 transition" />
-            <form action="https://formspree.io/f/mnjwbkep" method="POST" className="relative flex flex-col md:flex-row gap-0 border-2 border-white/10 overflow-hidden">
+            <form action="https://formspree.io/f/mnjkrrjg" method="POST" className="relative flex flex-col md:flex-row gap-0 border-2 border-white/10 overflow-hidden">
               <input type="hidden" name="_subject" value="GIVEAWAY ENTRY: SECTOR GAMMA" />
               <input 
                 type="email" 
@@ -529,7 +529,7 @@ export default function App() {
               className="w-full relative"
             >
                <div className="absolute -inset-4 bg-red-900/5 blur-2xl" />
-               <form action="https://formspree.io/f/mnjwbkep" method="POST" className="relative w-full space-y-6 p-10 border-2 border-white/5 bg-black/60 backdrop-blur-xl">
+               <form action="https://formspree.io/f/mnjkrrjg" method="POST" className="relative w-full space-y-6 p-10 border-2 border-white/5 bg-black/60 backdrop-blur-xl">
                   <input type="hidden" name="_subject" value="JOB APPLICATION: SAVICH18" />
                   <div className="space-y-2">
                     <div className="text-[10px] font-bold text-red-600 ml-1 uppercase">{t.contact.name}</div>
@@ -596,7 +596,7 @@ export default function App() {
               <div className="w-32 h-1 bg-red-700 mx-auto mt-4" />
            </div>
 
-           <form action="https://formspree.io/f/mnjwbkep" method="POST" className="space-y-8">
+           <form action="https://formspree.io/f/mnjkrrjg" method="POST" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                  <div className="space-y-2">
                     <label className="text-[10px] font-bold tracking-widest text-red-600 uppercase ml-2">{t.contact.name}</label>

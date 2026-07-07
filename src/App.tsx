@@ -456,46 +456,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Giveaway Section */}
-      <section className="py-32 px-6 bg-[#0c0c0c] border-y-4 border-red-900/30 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://i.ibb.co/23dv1zhW/image.png')] bg-cover bg-fixed opacity-5 grayscale sepia" />
-        <div className="absolute inset-0 crimson-gradient opacity-50" />
-        
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.h2 
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="text-5xl md:text-8xl font-display text-white mb-8 tracking-tighter text-3d uppercase italic"
-          >
-            {t.giveaway.title}
-          </motion.h2>
-          <p className="text-red-600 font-bold text-lg uppercase tracking-[0.3em] mb-16">{t.giveaway.desc}</p>
-          
-          <div className="relative group max-w-2xl mx-auto">
-            <div className="absolute -inset-1 bg-red-600 blur opacity-20 group-hover:opacity-40 transition" />
-            <form action="https://formspree.io/f/mnjkrrjg" method="POST" className="relative flex flex-col md:flex-row gap-0 border-2 border-white/10 overflow-hidden">
-              <input type="hidden" name="_subject" value="GIVEAWAY ENTRY: SECTOR GAMMA" />
-              <input 
-                type="email" 
-                name="email" 
-                placeholder={t.giveaway.placeholder} 
-                required 
-                className="flex-grow bg-black/80 p-6 outline-none font-mono text-xl text-white placeholder:text-gray-700 focus:bg-black transition-colors"
-                onMouseDown={(e) => e.stopPropagation()}
-              />
-              <button 
-                type="submit" 
-                onMouseDown={(e) => e.stopPropagation()}
-                className="px-12 py-6 bg-red-700 hover:bg-black hover:text-red-600 border-t-2 md:border-t-0 md:border-l-2 border-red-600 text-white font-bold tracking-widest transition-all uppercase text-sm active:scale-95"
-              >
-                {t.giveaway.button}
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-                    {/* Support / Donation Section */}
+            {/* Support / Donation Section */}
       <section className="py-32 px-6 bg-[#0a0a0a] relative overflow-hidden border-y-4 border-red-900/30">
         <div className="absolute inset-0 opacity-5 pointer-events-none" 
           style={{ 
@@ -551,7 +512,7 @@ export default function App() {
             </p>
           </motion.div>
 
-          {/* Bonus Table */}
+          {/* Bonus Table - ONLY 2$ AND 5$ */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -576,7 +537,7 @@ export default function App() {
                       <span className="text-gray-400 text-sm font-mono">Support the project</span>
                     </td>
                   </tr>
-                  <tr className="hover:bg-white/5 transition-colors border-l-2 border-red-600">
+                  <tr className="hover:bg-white/5 transition-colors border-l-2 border-red-600 bg-red-950/10">
                     <td className="p-4 text-white font-display text-xl">
                       5$+
                       <span className="block text-[8px] text-red-500 font-mono tracking-widest">SPECIAL</span>
@@ -585,31 +546,6 @@ export default function App() {
                       <span className="text-red-500 font-bold text-lg tracking-wider">YOUR NAME IN GAME CREDITS</span>
                       <span className="block text-gray-400 text-xs font-mono mt-1">Highlighted in red color</span>
                       <span className="block text-gray-500 text-[10px] font-mono mt-2 italic">Write your nickname in donation comment</span>
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-white/5 transition-colors">
-                    <td className="p-4 text-white font-display text-xl">10$+</td>
-                    <td className="p-4 text-gray-400 text-sm font-mono">
-                      Name in credits + exclusive concept art with developer signature
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-white/5 transition-colors">
-                    <td className="p-4 text-white font-display text-xl">50$+</td>
-                    <td className="p-4 text-gray-400 text-sm font-mono">
-                      All above + early access 2 months before release
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-white/5 transition-colors">
-                    <td className="p-4 text-white font-display text-xl">100$+</td>
-                    <td className="p-4 text-gray-400 text-sm font-mono">
-                      All above + custom character or enemy with your name in the game
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-white/5 transition-colors border-t-2 border-red-900/30">
-                    <td className="p-4 text-white font-display text-2xl text-red-600">500$+</td>
-                    <td className="p-4">
-                      <span className="text-red-500 font-bold text-lg tracking-wider">"SHADOW PRODUCER"</span>
-                      <span className="block text-gray-400 text-xs font-mono mt-1">Name on main screen, closed builds access, direct chat with developer</span>
                     </td>
                   </tr>
                 </tbody>
@@ -642,7 +578,7 @@ export default function App() {
             </div>
           </div>
 
-          {/* Quick Links - ONLY DonationAlerts */}
+          {/* Quick Links */}
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a 
               href="https://www.donationalerts.com/r/official_savich18"
